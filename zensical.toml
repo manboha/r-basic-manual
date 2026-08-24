@@ -1,0 +1,125 @@
+[project]
+site_name = "R Basic Manual"
+site_description = "한국어로 작성된 Base R 기초 매뉴얼"
+site_author = "manboha"
+copyright = "Copyright &copy; 2026 manboha"
+
+# 챕터 목차 (01~19장, 단일 체제 — 부/파트 구분 없음)
+nav = [
+  { "서문" = "index.md" },
+  { "01. R 설치" = "01. R 설치.md" },
+  { "02. R 프로그래밍 기초" = "02. R 프로그래밍 기초.md" },
+  { "03. R 제어문" = "03. R 제어문.md" },
+  { "04. R 데이터 구조" = "04. R 데이터 구조.md" },
+  { "05. 수학 함수" = "05. 수학 함수.md" },
+  { "06. 행렬 함수" = "06. 행렬 함수.md" },
+  { "07. 논리 함수" = "07. 논리 함수.md" },
+  { "08. 반복·함수형 함수" = "08. 반복·함수형 함수.md" },
+  { "09. 통계 함수" = [
+      { "9.1 확률분포" = "9.1 확률분포.md" },
+      { "9.2 기술통계" = "9.2 기술통계.md" },
+      { "9.3 회귀·모형적합" = "9.3 회귀·모형적합.md" },
+      { "9.4 평활·보간" = "9.4 평활·보간.md" },
+      { "9.5 시계열" = "9.5 시계열.md" },
+      { "9.6 모형 진단" = "9.6 모형 진단.md" },
+      { "9.7 가설검정" = "9.7 가설검정.md" },
+      { "9.8 최적화" = "9.8 최적화.md" },
+    ]
+  },
+  { "10. 날짜·시간 함수" = "10. 날짜·시간 함수.md" },
+  { "11. 객체 함수" = "11. 객체 함수.md" },
+  { "12. 문자열 함수" = "12. 문자열 함수.md" },
+  { "13. 데이터 선택·가공 함수" = "13. 데이터 선택·가공 함수.md" },
+  { "14. 입출력 함수" = "14. 입출력 함수.md" },
+  { "15. 시스템 함수" = "15. 시스템 함수.md" },
+  { "16. 사용자 정의 함수" = "16. 사용자 정의 함수.md" },
+  { "17. 에러 처리와 디버깅" = "17. 에러 처리와 디버깅.md" },
+  { "18. R 그래프" = "18. R 그래프.md" },
+  { "19. R 객체와 클래스" = "19. R 객체와 클래스.md" },
+  { "부록" = "부록-함수색인.md" },
+]
+
+# 헤더 앵커(permalink) 유니코드 설정 — 한글 문서에는 필수
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+toc.slugify.object = "pymdownx.slugs.slugify"
+toc.slugify.kwds.case = "lower"
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+# pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
+tables = {}
+
+
+
+[project.theme]
+language = "ko"
+# variant = "classic"   # 기본값은 "modern". Material for MkDocs 스타일 원하면 "classic"
+
+features = [
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "search.suggest",
+  "search.share",
+]
+
+[project.theme.font]
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "라이트 모드로 전환"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "indigo"
+accent = "amber"
+toggle.icon = "lucide/sun"
+toggle.name = "다크 모드로 전환"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "indigo"
+accent = "amber"
+toggle.icon = "lucide/moon"
+toggle.name = "시스템 설정을 따르도록 전환"
